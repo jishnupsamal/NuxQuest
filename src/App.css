@@ -1,0 +1,8 @@
+::-webkit-scrollbar-track{
+background-color: aqua!important;
+width: 40px!important;
+}
+
+body{
+    cursor:url(/cursorPointer.png), default ;
+}
