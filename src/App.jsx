@@ -7,17 +7,26 @@ import {
   Route
 } from "react-router-dom";
 import Card from './Components/Card';
+import Landing from './Components/Landing';
 
 
 function App() {
 
   return (
-    <>
     <Router>
-      <Navbar/>
-      <Card/>
-    </Router>
+    <>
+      <Routes>
+        <Route exact path='/' element={
+        <Landing/>}/>
+      <Route exact path='/home' element={
+        <>
+        <Navbar/>
+        <Card/>
+</>
+      }/>
+      </Routes>
     </>
+    </Router>
   )
 }
 

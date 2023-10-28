@@ -4,7 +4,6 @@ import Anchor from './Link'
 
 function Navbar() {
     document.body.style.backgroundColor='#F2ECBE'
-    document.body.style.height='2000px'
   return (
     <div>
       <header className="text-gray-600 body-font bg-[#9A3B3B]">
@@ -16,9 +15,9 @@ function Navbar() {
       <span className="ml-3 text-xl">Exun'23</span>
     </Link>
     <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-[#DE9B72] text-white flex flex-wrap items-center text-base justify-center">
-      <Anchor href={'/'} content={'Encyclopedia'} exStyle={"mr-5"}/>
-           <Anchor href={'/'} exStyle={"mr-5"} content={'Broadcast'}/> 
-                <Anchor href={'/'} exStyle={"mr-5"} content={'Third Link'}/>
+      <Anchor href={'/home'} content={'Encyclopedia'} exStyle={"mr-5"}/>
+           <Anchor href={'/home'} exStyle={"mr-5"} content={'Broadcast'}/> 
+                {/* <Anchor href={'/home'} exStyle={"mr-5"} content={'Third Link'}/> */}
       {/* <Link to='' className="mr-5 hover:text-gray-900">Fourth Link</Link> */}
     </nav>
     {/* <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
