@@ -1,0 +1,7 @@
+from django.db import models
+
+class Announcement(models.Model):
+    title = models.CharField("Title", max_length=100)
+    content = models.TextField('Content')
+    date_added = models.DateTimeField(auto_now_add=True)
+    date_updated = models.DateTimeField(auto_now=True)
