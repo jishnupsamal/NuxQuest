@@ -9,7 +9,7 @@ function Landing() {
             <p className='text-yellow-400'>Welcome to
             </p>
             <p className='font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-emerald-600 via-zinc-700 leading-loose'>
-                NexQuest
+                NuxQuest
             </p>
         </div>
             <Anchor href={'/home'} content={'Get Started'} exStyle={'pl-3 text-white font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 w-28 mx-auto p-2 rounded-lg'}/>
