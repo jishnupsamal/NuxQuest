@@ -1,13 +1,14 @@
 import { useState } from 'react'
-import './App.css'
-import Navbar from './Components/Navbar'
+import './Styles/App.css'
+
 import {
   BrowserRouter as Router,
   Routes,
   Route
 } from "react-router-dom";
-import Card from './Components/Card';
+
 import Landing from './Components/Landing';
+import HomePage from './Pages/HomePage';
 
 
 function App() {
@@ -19,10 +20,7 @@ function App() {
         <Route exact path='/' element={
         <Landing/>}/>
       <Route exact path='/home' element={
-        <>
-        <Navbar/>
-        <Card/>
-</>
+   <HomePage/>
       }/>
       </Routes>
     </>

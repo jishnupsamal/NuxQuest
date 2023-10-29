@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './Link.css'
+import '../Styles/Link.css'
 
 function Anchor(props) {
   return (
