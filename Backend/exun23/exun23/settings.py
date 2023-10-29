@@ -9,8 +9,9 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import os
 from pathlib import Path
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,13 +21,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-m#(#@x(&qp-dh7gmav26^i1^8cd*jh1vnqo27q3(19zw((5b3s'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['nuxquest.onrender.com', '127.0.0.1', 'localhost']
+CSRF_TRUSTED_ORIGINS = ['https://nuxquest.onrender.com','http://127.0.0.1']
 
 # Application definition
 
@@ -37,6 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    # Third Party Apps
+    'rest_framework',
+    "corsheaders",
+    'storages',
+    'drf_yasg',
 
     # User defined modules
     'encyclopedia',
@@ -119,7 +126,21 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STORAGES = {
+    "default": {"BACKEND": "storages.backends.s3boto3.S3Boto3Storage"},
+    "staticfiles": {"BACKEND": "storages.backends.s3boto3.S3StaticStorage"}
+}
+AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
+AWS_S3_ENDPOINT_URL = config('AWS_S3_ENDPOINT_URL')
+AWS_S3_CUSTOM_DOMAIN = config('AWS_S3_CUSTOM_DOMAIN')
+
+AWS_LOCATION = 'static'
+STATIC_URL = 'https://stadinator.s3.eu-central-003.backblazeb2.com/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,'static')
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

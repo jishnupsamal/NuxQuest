@@ -4,3 +4,6 @@ Scripts
 __pycache__
 migrations
 *.cfg
+.vscode
+*.env
+cred
