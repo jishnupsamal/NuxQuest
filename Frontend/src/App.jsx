@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import Navbar from './Components/NAVBAR.JSX'
+import Navbar from './Components/Navbar.JSX'
 import {
   BrowserRouter as Router,
   Routes,
