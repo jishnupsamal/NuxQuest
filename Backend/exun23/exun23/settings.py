@@ -29,6 +29,8 @@ DEBUG = config('DEBUG', cast=bool)
 ALLOWED_HOSTS = ['nuxquest.onrender.com', '127.0.0.1', 'localhost']
 CSRF_TRUSTED_ORIGINS = ['https://nuxquest.onrender.com', 'https://nuxquest.netlify.app', 'https://nuxquest1.netlify.app',
 'http://127.0.0.1', 'http://localhost']
+CORS_ALLOWED_ORIGINS = ['https://nuxquest.onrender.com', 'https://nuxquest.netlify.app', 'https://nuxquest1.netlify.app',
+'http://127.0.0.1', 'http://localhost']
 
 # Application definition
 
