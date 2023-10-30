@@ -13,6 +13,22 @@ import {
   AccordionBody,
 } from "@material-tailwind/react";
 
+
+function Icon({ id, open }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={2}
+      stroke="currentColor"
+      className={`${id === open ? "rotate-180" : ""} h-5 w-5 transition-transform`}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+    </svg>
+  );
+}
+
 function Broadcast() {
   const [open, setOpen] = useState(1);
   // const [alwaysOpen, setAlwaysOpen] = useState(true);
@@ -115,7 +131,7 @@ axios.get('https://nuxquest.onrender.com/announcement/')
     <div className='w-2/3 mx-auto mb-10 border-2 border-solid border-black p-4 bg-yellow-500/50 rounded-lg hover:cursor-[url(/cursorFinger.png),_pointer'>
  
       {aList.length > 0 ? aList.map((elem,ind)=>{
-        return <Accordion animate={CUSTOM_ANIMATION} className='hover:cursor-[url(/cursorPointer.png),default]' key={ind} open={open === elem.id}>
+        return <Accordion icon={<Icon id={elem.id} open={open} />} animate={CUSTOM_ANIMATION} className='hover:cursor-[url(/cursorPointer.png),default]' key={ind} open={open === elem.id}>
         <AccordionHeader className='hover:cursor-[url(/cursorFinger.png),_pointer]' onClick={() => handleOpen(elem.id)}>
           {elem.title}
         </AccordionHeader>
