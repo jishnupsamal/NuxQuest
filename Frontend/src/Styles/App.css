@@ -3,6 +3,10 @@ background-color: aqua!important;
 width: 40px!important;
 }
 
+html{
+    cursor:url(/cursorPointer.png), default ;
+}
+
 body{
     cursor:url(/cursorPointer.png), default ;
 }

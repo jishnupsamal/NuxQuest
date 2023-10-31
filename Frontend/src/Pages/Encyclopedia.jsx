@@ -2,13 +2,16 @@ import React, { useEffect, useState, useRef } from 'react'
 import { ErrorMessage, Field, Form, Formik, useField } from 'formik';
 import * as Yup from "yup";
 import Navbar from '../Components/Navbar'
+
 import Card from '../Components/Card';
+
 import {
   Button,
   Dialog,
   DialogHeader,
   DialogBody,
   DialogFooter,
+
 
   CardHeader,
   CardBody,
@@ -21,10 +24,13 @@ import {
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
+
 // VITE_API_BASE_URL = 'https://nuxquest.onrender.com' set in .env
 const BASE_URL = import.meta.env.VITE_API_BASE_URL
 
 // const API_URL = 'http://127.0.0.1:4200' + '/encyclopedia/'
+
+
 
 function Encyclopedia() {
   const [enc, setEnc] = useState([])
@@ -80,7 +86,9 @@ function Encyclopedia() {
   // });
 
   const handleOpen = () => setOpen(!open);
+
   // const handleClose = () => setOpen(false);
+
 
   useEffect(() => {
     axios.get(API_URL)
@@ -93,6 +101,7 @@ function Encyclopedia() {
   return (
     <>
       <Navbar />
+
       <div className='flex flex-col w-2/3 mx-auto justify-center items-center gap-y-4'>
 <h1 className='font-bold text-5xl leading-20'>NuxeLand Encyclopedia</h1>
 <p className='text-xl text-center leading-[30px] mb-2'>Find information on all the majestic flora and fauna of <span className='text-red-500'>NuxeLand</span> that you might encoutner in your journey.</p>
@@ -104,6 +113,7 @@ function Encyclopedia() {
     className="bg-transparent shadow-none"
   >
     <DialogBody>
+
 
       {/* Form Starts */}
       <Formik
@@ -119,6 +129,7 @@ function Encyclopedia() {
                   'Content-Type': 'multipart/form-data'
                 }
               })
+
               .then((res) => {
                 // console.log(res)
                 axios.get(API_URL)
@@ -128,11 +139,13 @@ function Encyclopedia() {
                     console.log(e)
                   })
               })
+
             actions.setSubmitting(false);
           }, 1000);
         }}
       >
         {(formik) => (
+
           <Form encType='multipart/form-data' className='flex flex-col justify-evenly mx-auto h-[480px] w-2/3 ' >
 
             <Field type="text" name="term" placeholder="Term" className='w-full p-2 placeholder:text-gray-600 text-black outline-gray-500 outline-1 border-2 border-black rounded-full outline'/>
@@ -173,27 +186,33 @@ function Encyclopedia() {
 export default Encyclopedia
 
 // Dialog Component
+
 const CreateEntryDialog = (open, handleOpen) => (
+
   <Dialog
     size="xs"
     open={open}
     handler={handleOpen}
     className="bg-transparent shadow-none"
   >
+
     {/* <Card className="mx-auto w-full max-w-[24rem]">
       <CardBody>
 
       </CardBody>
     </Card> */}
+
   </Dialog >
 )
 
 const FileUpload = ({ fileRef, ...props }) => {
   const [field, meta] = useField(props);
   return (
+
     <div className=''>
       <label className='bg-gray-600' htmlFor="image">Choose files</label>{" "}
       <input className='bg-gray-600 ' ref={fileRef} multiple={false} type="file"
+
         accept="image/png, image/jpeg, .jpg, .gif" onChange={e => setImage(e.currentTarget.files[0])}
         {...field} />
       {meta.touched && meta.error ? (
