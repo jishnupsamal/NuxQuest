@@ -9,7 +9,7 @@ function HomePage() {
     <>
     <Navbar/>
     <Hero/>
-    <Card/>
+    {/* <Card/> */}
 </>
   )
 }
