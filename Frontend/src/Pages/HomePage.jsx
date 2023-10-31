@@ -29,7 +29,7 @@ Dolore ipsam dicta consequatur repellat velit itaque, excepturi magnam harum ius
 Iure corporis inventore  voluptate recusandae expedita ea nulla corrupti neque in earum esse, inventore, necessitatibus numquam natus! Eveniet quo eius accusantium quam veniam ducimus necessitatibus similique aliquam beatae.
 Voluptatum neque vero nulla minima ad magnam illum sapiente quos amet. Autem nesciunt dolore quo voluptatibus aspernatur laudantium repudiandae eos, delectus ut corporis laboriosam, libero nisi assumenda dolorum, dolorem aliquid.
 Saepe assumenda officiis rem. Veritatisuod, cupiditate architecto<br/><br/> 
-<img className='[@media(min-width:570px)]:h-[450px] [@media(min-width:570px)]:w-[600px] [@media(min-width:760px)]:h-[550px] [@media(min-width:760px)]:w-[750px] mx-auto' src="/map.jpg" alt="map" />
+<img className='[@media(min-width:570px)]:h-[450px] [@media(min-width:570px)]:w-[600px] [@media(min-width:760px)]:h-[550px] [@media(min-width:760px)]:w-[750px] mx-auto' src="/map.webp" alt="map" />
 <br/><br/>
 ipsam quaerat provident! Necessitatibus aliquam aspernatur nulla pariatur, quae et debitis quos totam id hic.
 Expedita aperiam enim libero aliquid? Voluptatem, veritatis voluptates blanditiis nostrum beatae sed soluta, ex repellat accusamus laborum minus hic dolore amet possimus? Iusto, expedita officiis. Vel maxime rerum itaque provident!
@@ -45,7 +45,7 @@ Nemo, unde quasi officiis voluptatibus facere, magnam sed voluptas voluptate par
       Deleniti aperiam dolore laborum, hic ullam iusto maxime veritatis voluptatum, nulla explicabo, officia ab exercitationem accusantium assumenda suscipit atque dolor iste eveniet cum voluptate deserunt. Consectetur voluptates dolorem ex reprehenderit?</p>
       <div className='w-[250px] [@media(min-width:460px)]:w-[400px] mt-3 mx-auto flex flex-col gap-y-3'>
 
-      <textarea placeholder='Enter Text' className={`${font} placeholder:text-gray-800 text-black text-md outline-gray-700 outline p-3   outline-1 rounded-lg block w-full`}  color='deep-orange' rows={8}/>
+      <textarea placeholder='Enter Text' className={`${font} placeholder:text-gray-800 font-bold text-black text-md outline-gray-700 outline p-3   outline-1 rounded-lg block w-full`}  color='deep-orange' rows={8}/>
       <Button  variant='gradient' onClick={handleClick} className='h-[40px]  hover:cursor-[url(/cursorFinger.png),_pointer] w-[150px]' color='amber'>Translate</Button>
       </div>
     </div>
