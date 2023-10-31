@@ -9,7 +9,13 @@ export default withMT({
         './components/**/*.jsx',
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      'nunito': ['nunito', 'sans-serif'],
+      'Esoteric': ['"Esoteric"', 'serif']   // Ensure fonts with spaces have " " surrounding it.
+    },
+  
+    extend: {
+    },
   },
   plugins: [],
 })

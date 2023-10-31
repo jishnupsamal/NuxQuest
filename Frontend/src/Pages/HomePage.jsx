@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Card from '../Components/Card';
 
 import Navbar from '../Components/Navbar.jsx';
 import Hero from '../Components/Hero';
+import { Button, Textarea } from '@material-tailwind/react';
 
 function HomePage() {
+
+  const [font,SetFont]=useState('')
+
+const handleClick=()=>{
+  if (font==='font-Esoteric'){
+    SetFont('')
+  }
+    else{
+SetFont('font-Esoteric')
+    }
+}
   return (
     <>
     <Navbar/>
@@ -31,6 +43,11 @@ Nemo, unde quasi officiis voluptatibus facere, magnam sed voluptas voluptate par
       Aperiam ea ducimus molestiae nulla reiciendis.voluptatum.
       Consectetur porro iste explicabo provident deleniti aliquid, nam esse officiis amet, molestiae quibusdam tempore, sit deserunt totam! Hic ipsum velit, perferendis tempore ratione doloribus eveniet sunt, recusandae adipisci deleniti exercitationem!
       Deleniti aperiam dolore laborum, hic ullam iusto maxime veritatis voluptatum, nulla explicabo, officia ab exercitationem accusantium assumenda suscipit atque dolor iste eveniet cum voluptate deserunt. Consectetur voluptates dolorem ex reprehenderit?</p>
+      <div className='w-[400px] mt-3 mx-auto flex flex-col gap-y-3'>
+
+      <textarea placeholder='Enter Text' className={`${font} placeholder:text-gray-800 text-black text-md outline-gray-700 outline p-3   outline-1 rounded-lg block w-full`}  color='deep-orange' rows={8}/>
+      <Button  variant='gradient' onClick={handleClick} className='h-[40px]  hover:cursor-[url(/cursorFinger.png),_pointer] w-[150px]' color='amber'>Translate</Button>
+      </div>
     </div>
     </div>
 
