@@ -23,13 +23,13 @@ SetFont('font-Esoteric')
     <Hero/>
     {/* <Card/> */}
     <div className='p-4 my-5'>
-    <h1 className='text-2xl [@media(min-width:460px)]:text-5xl font-bold leading-[60px]'>What is ExunLand?</h1>
+    <h1 className='text-2xl [@media(min-width:460px)]:text-5xl font-bold leading-[60px]'>What is NuxEland?</h1>
 <p className='text-sm [@media(min-width:460px)]:text-base'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo perspiciatis ea laudantium a veniam esse nemo expedita similique nobis ut aspernatur earum, reiciendis eligendi reprehenderit distinctio iste numquam, itaque obcaecati.
 Dolore ipsam dicta consequatur repellat velit itaque, excepturi magnam harum iusto et consequuntur tenetur ratione rem ea. Repellat fugiat non, perspiciatis rerum deserunt sint omnis animi quos saepe quis blanditiis.
 Iure corporis inventore  voluptate recusandae expedita ea nulla corrupti neque in earum esse, inventore, necessitatibus numquam natus! Eveniet quo eius accusantium quam veniam ducimus necessitatibus similique aliquam beatae.
 Voluptatum neque vero nulla minima ad magnam illum sapiente quos amet. Autem nesciunt dolore quo voluptatibus aspernatur laudantium repudiandae eos, delectus ut corporis laboriosam, libero nisi assumenda dolorum, dolorem aliquid.
 Saepe assumenda officiis rem. Veritatisuod, cupiditate architecto<br/><br/> 
-<img src="" alt="map" />
+<img className='[@media(min-width:570px)]:h-[450px] [@media(min-width:570px)]:w-[600px] [@media(min-width:760px)]:h-[550px] [@media(min-width:760px)]:w-[750px] mx-auto' src="/map.jpg" alt="map" />
 <br/><br/>
 ipsam quaerat provident! Necessitatibus aliquam aspernatur nulla pariatur, quae et debitis quos totam id hic.
 Expedita aperiam enim libero aliquid? Voluptatem, veritatis voluptates blanditiis nostrum beatae sed soluta, ex repellat accusamus laborum minus hic dolore amet possimus? Iusto, expedita officiis. Vel maxime rerum itaque provident!
