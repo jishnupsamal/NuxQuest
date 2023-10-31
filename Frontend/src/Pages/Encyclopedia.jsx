@@ -103,8 +103,8 @@ function Encyclopedia() {
       <Navbar />
 
       <div className='flex flex-col mt-5 w-2/3 mx-auto justify-center items-center gap-y-4'>
-<h1 className='font-bold text-5xl leading-20 text-center'>NuxEland Encyclopedia</h1>
-<p className='text-xl text-center leading-[30px] mb-2'>Find information on all the majestic flora and fauna of <span className='text-red-500'>NuxEland</span> that you might encoutner in your journey.</p>
+<h1 className='font-bold text-3xl [@media(min-width:350px)]:text-5xl leading-20 text-center'>NuxEland Encyclopedia</h1>
+<p className='text-md [@media(min-width:350px)]:text-xl text-center leading-[30px] mb-2'>Find information on all the majestic flora and fauna of <span className='text-red-500'>NuxEland</span> that you might encoutner in your journey.</p>
       <Button color="red" onClick={handleOpen}>Add Term</Button>
       <Dialog
     size="xs"
@@ -146,7 +146,7 @@ function Encyclopedia() {
       >
         {(formik) => (
 
-          <Form encType='multipart/form-data' className='flex flex-col justify-evenly mx-auto h-[480px] w-2/3 ' >
+          <Form encType='multipart/form-data' className='flex flex-col justify-evenly mx-auto h-[480px] w-full [@media(min-width:450px)]:w-2/3 ' >
 
             <Field type="text" name="term" placeholder="Term" className='w-full p-2 placeholder:text-gray-600 text-black outline-gray-500 outline-1 border-2 border-black rounded-full outline'/>
        
@@ -172,8 +172,8 @@ function Encyclopedia() {
       <div className='flex flex-row px-5 my-4 w-full flex-wrap gap-y-4 justify-evenly'>
       {enc.map(term => (
         <div className='text-center hover:cursor-[url(/cursorFinger.png),_pointer] ' key={term.slug}>
-          <Link className='hover:cursor-[url(/cursorFinger.png),_pointer]' to={`${term.slug}`}>
-            <Card imgUrl={term.image} style={'h-[400px]  w-[400px]'}/>
+          <Link className='mx-auto hover:cursor-[url(/cursorFinger.png),_pointer]' to={`${term.slug}`}>
+            <Card imgUrl={term.image} style={''}/>
             <h2 className='font-semibold'>{term.term}</h2>
             </Link>
         </div>
