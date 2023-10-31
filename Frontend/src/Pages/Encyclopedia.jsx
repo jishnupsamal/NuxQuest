@@ -103,8 +103,8 @@ function Encyclopedia() {
       <Navbar />
 
       <div className='flex flex-col mt-5 w-2/3 mx-auto justify-center items-center gap-y-4'>
-<h1 className='font-bold text-5xl leading-20 text-center'>NuxeLand Encyclopedia</h1>
-<p className='text-xl text-center leading-[30px] mb-2'>Find information on all the majestic flora and fauna of <span className='text-red-500'>NuxeLand</span> that you might encoutner in your journey.</p>
+<h1 className='font-bold text-5xl leading-20 text-center'>NuxEland Encyclopedia</h1>
+<p className='text-xl text-center leading-[30px] mb-2'>Find information on all the majestic flora and fauna of <span className='text-red-500'>NuxEland</span> that you might encoutner in your journey.</p>
       <Button color="red" onClick={handleOpen}>Add Term</Button>
       <Dialog
     size="xs"

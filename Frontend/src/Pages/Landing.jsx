@@ -12,7 +12,7 @@ function Landing() {
                 NuxQuest
             </p>
         </div>
-            <Anchor href={'/home'} content={'Get Started'} exStyle={'pl-3 text-white font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 w-28 mx-auto p-2 rounded-lg'}/>
+            <Anchor href={'/home'} content={'Enter'} exStyle={'px-4 text-white font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  mx-auto p-2 rounded-lg'}/>
       </div>
     </div>
   )

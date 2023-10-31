@@ -9,7 +9,7 @@ import {
 
 import Landing from './Pages/Landing';
 import HomePage from './Pages/HomePage';
-import Dictionary from './Pages/Dict';
+// import Dictionary from './Pages/Dict';
 import Encyclopedia from './Pages/Encyclopedia'
 import EncyclopediaDetail from './Pages/EncyclopediaDetail'
 import Broadcast from './Pages/Broadcast';
@@ -23,9 +23,9 @@ function App() {
       <Routes>
         <Route exact path='/' element={
         <Landing/>}/>
-      <Route exact path='/dict' element={
+      {/* <Route exact path='/dict' element={
    <Dictionary/>
-      }/>
+      }/> */}
        <Route exact path='/home' element={
    <HomePage/>
       }/>
