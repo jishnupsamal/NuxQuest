@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 import Anchor from './Link'
 
 function Navbar() {
-    document.body.style.backgroundColor='#F2ECBE'
+    // document.body.style.backgroundImage="url('/bgImg.jpg')"
+    
   return (
     <div className=''>
       <header className="text-gray-600 body-font bg-[#9A3B3B] shadow-md shadow-red-900/70 z-10">

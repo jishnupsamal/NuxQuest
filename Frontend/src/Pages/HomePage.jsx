@@ -24,7 +24,7 @@ SetFont('font-Esoteric')
     {/* <Card/> */}
     <div className='p-4 my-5'>
     <h1 className='text-2xl [@media(min-width:460px)]:text-5xl font-bold leading-[60px]'>What is NuxEland?</h1>
-<p className='text-sm [@media(min-width:460px)]:text-base'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo perspiciatis ea laudantium a veniam esse nemo expedita similique nobis ut aspernatur earum, reiciendis eligendi reprehenderit distinctio iste numquam, itaque obcaecati.
+<p className='text-sm [@media(min-width:460px)]:text-base'>NuxEland is the  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo perspiciatis ea laudantium a veniam esse nemo expedita similique nobis ut aspernatur earum, reiciendis eligendi reprehenderit distinctio iste numquam, itaque obcaecati.
 Dolore ipsam dicta consequatur repellat velit itaque, excepturi magnam harum iusto et consequuntur tenetur ratione rem ea. Repellat fugiat non, perspiciatis rerum deserunt sint omnis animi quos saepe quis blanditiis.
 Iure corporis inventore  voluptate recusandae expedita ea nulla corrupti neque in earum esse, inventore, necessitatibus numquam natus! Eveniet quo eius accusantium quam veniam ducimus necessitatibus similique aliquam beatae.
 Voluptatum neque vero nulla minima ad magnam illum sapiente quos amet. Autem nesciunt dolore quo voluptatibus aspernatur laudantium repudiandae eos, delectus ut corporis laboriosam, libero nisi assumenda dolorum, dolorem aliquid.
