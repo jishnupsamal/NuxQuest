@@ -12,6 +12,7 @@ import HomePage from './Pages/HomePage';
 import Dictionary from './Pages/Dict';
 import Encyclopedia from './Pages/Encyclopedia'
 import Broadcast from './Pages/Broadcast';
+import EncyclopediaMethod from './Components/EncyclopediaMethod';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
       <Route exact path='/encyclopedia' element={
         <Encyclopedia/>
            }/>
+           <Route path='encyclopedia/:slug' element={<EncyclopediaMethod/>}/> 
       </Routes>
     </>
     </Router>

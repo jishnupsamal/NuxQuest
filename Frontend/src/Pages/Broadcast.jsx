@@ -29,7 +29,11 @@ function Icon({ id, open }) {
   );
 }
 
+const BASE_URL = import.meta.env.VITE_API_BASE_URL
 function Broadcast() {
+
+  const API_URL = BASE_URL + `/announcement/`
+
   const [open, setOpen] = useState(1);
   // const [alwaysOpen, setAlwaysOpen] = useState(true);
   const [vis, setVis] = useState(0)
@@ -66,13 +70,13 @@ function Broadcast() {
 
     if (Object.keys(validationErrors).length === 0) {
       setLoading(true)
-      axios.post('https://nuxquest.onrender.com/announcement/', { title: formData.title, content: formData.content }).then((res) => {
+      axios.post(API_URL, { title: formData.title, content: formData.content }).then((res) => {
         console.log(res.status)
         if (res.status === 201) {
 setLoading(false)
-axios.get('https://nuxquest.onrender.com/announcement/')
+axios.get(API_URL)
 .then((res) =>{setAList(res.data.reverse())
-   console.log(aList)
+  //  console.log(aList)
   
 })
  .catch((err) => console.log(err))
@@ -90,7 +94,7 @@ axios.get('https://nuxquest.onrender.com/announcement/')
   useEffect(() => {
    axios.get('https://nuxquest.onrender.com/announcement/')
    .then((res) => {setAList(res.data.reverse())
-     console.log(aList)
+    //  console.log(aList)
     }
   
   )
@@ -115,9 +119,9 @@ axios.get('https://nuxquest.onrender.com/announcement/')
     </span>
     </h3>
     <form  className='flex flex-col justify-evenly mx-auto h-[400px] w-1/2'>
-    <Input name='title' onChange={handleChange} variant="outlined" label="Title" />
+    <Input name='title' onChange={handleChange} variant="outlined" label="Title" className='bg-white'/>
     {errors.title && <span className='text-red-400'>{errors.title}</span>}
-    <Textarea name='content' size="lg" onChange={handleChange} label="Description" rows={8}/>
+    <Textarea name='content' size="lg" onChange={handleChange} label="Description" className='bg-white' rows={8}/>
     {errors.content && <span className='text-red-400'>{errors.content}</span>}
     <Button color='deep-orange' onClick={handleSubmit} variant="gradient">Submit</Button>
     {vis ? <span className='text-red-400 block'>Broadcast Failed</span> : ''}
@@ -131,7 +135,7 @@ axios.get('https://nuxquest.onrender.com/announcement/')
     <div className='w-2/3 mx-auto mb-10 border-2 border-solid border-black p-4 bg-yellow-500/50 rounded-lg hover:cursor-[url(/cursorFinger.png),_pointer'>
  
       {aList.length > 0 ? aList.map((elem,ind)=>{
-        return <Accordion icon={<Icon id={elem.id} open={open} />} animate={CUSTOM_ANIMATION} className='hover:cursor-[url(/cursorPointer.png),default]' key={ind} open={open === elem.id}>
+        return <Accordion icon={<Icon id={elem.id} open={open} />} animate={CUSTOM_ANIMATION} className='hover:cursor-[url(/cursorPointer.png),_default]' key={ind} open={open === elem.id}>
         <AccordionHeader className='hover:cursor-[url(/cursorFinger.png),_pointer]' onClick={() => handleOpen(elem.id)}>
           {elem.title}
         </AccordionHeader>
