@@ -10,7 +10,7 @@ export default withMT({
   ],
   theme: {
     fontFamily: {
-      'AceRecords': ['"Ace Records"', 'cursive'],
+      // 'AceRecords': ['"Ace Records"', 'cursive'],
       'Esoteric': ['"Esoteric"', 'serif']   
     },
   
