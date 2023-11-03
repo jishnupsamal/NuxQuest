@@ -15,7 +15,7 @@ function Landing() {
     //   </div>
     // </div>
     <div className="overflow-hidden h-[100vh] w-full before:bg-[url('/landingBg.jpg')] before:absolute before:top-0 before:bg-no-repeat before:bg-cover before:bg-center before:bottom-0 before:right-0 before:left-0  flex justify-center items-center before:z-2 before:h-[100vh] before:w-[100vw] before:blur-[3px]">
-      <img src="/public/nuxquestlogo.webp" alt="nuxquestlogo" className='z-10 [@media(min-width:731px)]:h-[700px] ' />
+      <img src="/nuxquestlogo.webp" alt="nuxquestlogo" className='z-10 [@media(min-width:731px)]:h-[700px] ' />
       <Anchor href={'/home'} content={'Enter'} exStyle={'px-4 text-white font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  mx-auto p-2 rounded-lg z-[11] self-center absolute'}/>
     </div>
   )
