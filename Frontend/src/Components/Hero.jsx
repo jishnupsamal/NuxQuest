@@ -8,7 +8,7 @@ function Hero() {
       <Fade cascade className='flex'>
         <div className='font-serif'>
 
-        <span className=' text-black'>Welcome </span> <span className=' text-black'>Adventurer</span>
+        <span className='font-serif text-black'>Welcome </span> <span className='font-serif text-black'>Adventurer</span>
         </div>
         </Fade>
     <div className=" text-red-600 text-2xl [@media(min-width:520px)]:text-5xl ">
