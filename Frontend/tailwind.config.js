@@ -10,8 +10,8 @@ export default withMT({
   ],
   theme: {
     fontFamily: {
-      'nunito': ['nunito', 'sans-serif'],
-      'Esoteric': ['"Esoteric"', 'serif']   // Ensure fonts with spaces have " " surrounding it.
+      'AceRecords': ['"Ace Records"', 'cursive'],
+      'Esoteric': ['"Esoteric"', 'serif']   
     },
   
     extend: {
