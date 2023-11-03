@@ -6,9 +6,9 @@ function Hero() {
   return (
     <div className="text-white text-4xl z-2  [@media(min-width:520px)]:text-7xl font-extrabold flex flex-col  bg-cover bg-center bg-no-repeat justify-center  h-[300px] pb-3 pl-2 py-4 gap-y-2">
       <Fade cascade className='flex'>
-        <div className='font-serif'>
+        <div className='font-AceRecords'>
 
-        <span className='font-serif text-black'>Welcome </span> <span className='font-serif text-black'>Adventurer</span>
+        <span className='font-AceRecords text-black'>Welcome </span> <span className='font-AceRecords text-black'>Adventurer</span>
         </div>
         </Fade>
     <div className=" text-red-600 text-2xl [@media(min-width:520px)]:text-5xl ">
